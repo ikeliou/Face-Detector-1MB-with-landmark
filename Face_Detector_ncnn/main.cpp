@@ -12,23 +12,25 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-
+	printf("%d\n",argc);
     string imgPath;
-    if  (argc = 1)
+    if  (argc == 1)
     {
         imgPath = "../sample.jpg";
     }
-    else if (argc = 2)
+    else if (argc == 2)
     {
         imgPath = argv[1];
     }
+	cout << imgPath << endl;
     string param = "../model/face.param";
     string bin = "../model/face.bin";
     const int max_side = 320;
 
     Detector detector(param, bin);
+    //Detector detector;
     Timer timer;
-    for	(int i = 0; i < 1000; i++){
+    for	(int i = 0; i < 10; i++){
 
 
         cv::Mat img = cv::imread(imgPath.c_str());

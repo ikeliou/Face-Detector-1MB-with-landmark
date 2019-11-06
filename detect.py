@@ -98,6 +98,7 @@ if __name__ == '__main__':
     # testing begin
     for i in range(100):
         image_path = "./img/sample.jpg"
+        image_path = "../frvt/common/images/S453-11-t10_03.ppm"
 
         img_raw = cv2.imread(image_path, cv2.IMREAD_COLOR)
         img = np.float32(img_raw)
